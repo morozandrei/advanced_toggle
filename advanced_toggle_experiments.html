@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Toggle CSS - Advanced Selectors</title>
+    <style>
+        .toggle {
+            border: 1px solid #333;
+            border-radius: 40px;
+            cursor: pointer;
+            display: inline-block;
+            line-height: 0;
+            width: 34px;
+            height: 18px;
+            user-select: none;
+        }
+        .toggle input {
+            display: none;
+        }
+        .toggle span {
+            display: inline-block;
+        }
+        .toggle span.switch {
+            font-size: 35px;
+            transform: translateY(9px);
+            margin-left: -1.5px;
+        }
+        .toggle input:checked+span {
+            color: red;
+            margin-right: -1.5px;
+            margin-left: 15px;
+        }
+        .toggle span.controls {
+            font-size: 8px;
+            margin-left: 3px;
+            transform: translateY(1px);
+        }
+        .toggle input:checked+span+span {
+            color: red;
+        }
+        .toggle input:checked+span+span+span {
+            display: none;
+        }  
+    </style>
+</head>
+<body>
+
+    <label class="toggle">
+        <input type="checkbox">
+        <span class="switch">&#9679;</span>
+        <span class="controls">On</span>
+        <span class="controls">Off</span>
+    </label>
+    
+</body>
+</html>
